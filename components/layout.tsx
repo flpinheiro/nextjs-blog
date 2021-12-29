@@ -4,11 +4,12 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import React from 'react'
+import NavBar from './nav-bar'
 
 const name = 'Felipe Luís Pinheiro'
 export const siteTitle = 'Next.js Sample Website'
 
-export default function Layout({ children, home }: {children: React.ReactNode, home?: boolean}) {
+export default function Layout({ children, home }: { children: React.ReactNode, home?: boolean }) {
     return (
         <div className={styles.container}>
             <Head>
@@ -63,8 +64,9 @@ export default function Layout({ children, home }: {children: React.ReactNode, h
             </header>
             <main>
                 <section>
-                    nav bar
+                    <NavBar />
                 </section>
+
                 {children}
             </main>
             {!home && (
